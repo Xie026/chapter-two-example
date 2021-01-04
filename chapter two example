@@ -1,0 +1,190 @@
+2-1
+public class ComputeArea {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double radius;
+		double area;
+		radius=20;
+		area=radius*radius*3.14159;
+		System.out.println("The area for the circle of radius"+ radius +"is"+ area);
+	}
+
+}
+
+
+
+
+
+2-2
+package hello;
+
+import java.util.Scanner;
+
+public class hello {
+
+	public static void main(String[] args) {
+		// TODO -Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter a number for radius:");
+		double radius=input.nextDouble();
+		double area=radius*radius*3.14159;
+		System.out.println("The area for the circle of radius"+ radius + "is" + area);
+	}
+
+}
+
+
+
+
+
+2-3 
+package hello;
+
+import java.util.Scanner;
+
+public class hello_world {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter three numbers:");
+		double number1=input.nextDouble();
+		double number2=input.nextDouble();
+		double number3=input.nextDouble();
+		double average=(number1+number2+number3)/3;
+		System.out.println("The average of"+number1+" "+number2+" "+number3+"is"+average);
+	}
+
+}
+
+
+
+
+
+2-4
+package hello;
+import java.util.Scanner;
+public class hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final double PI=3.14159;
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter a number for radius:");
+		double radius=input.nextDouble();
+		double area=radius*radius*PI;
+		System.out.println("The area for the circle of radius"+radius+"is"+area);
+	}
+
+}
+将π声明为常量
+
+
+
+
+
+2-5
+package hello;
+import java.util.Scanner;
+public class hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter a number for seconds:");
+		int seconds=input.nextInt();
+		int minutes=seconds/60;
+		int remainingSeconds=seconds%60;
+		System.out.println(seconds+" seconds is "+minutes+" minutes and "+remainingSeconds+" seconds ");
+	}
+}
+/除   %求余
+
+
+
+
+
+2-6
+package hello;
+import java.util.Scanner;
+public class Fahrenheit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter a degree in Fahrenheit: ");
+		double fahrenheit=input.nextDouble();
+		double celsius=(5.0/9)*(fahrenheit-32);
+		System.out.println("Fahrenheit "+fahrenheit+" is "+celsius+" in Celsius");
+	}
+}
+华氏温度转化为摄氏温度
+
+
+
+
+
+2-7
+package hello;
+
+public class ShowCurrentTime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long totalMilliseconds=System.currentTimeMillis();
+		long totalSeconds=totalMilliseconds/1000;
+		long currentSecond=totalSeconds%60;
+		long totalMinutes=totalSeconds/60;
+		long currentMinute=totalMinutes%60;
+		long totalHours=totalMinutes/60;
+		long currentHour=totalHours%24;
+		System.out.println("Current time is "+currentHour+":"+currentMinute+":"+currentSecond+" GMT");
+	}
+
+}
+调用System.currentTimeMillis()返回当前时间
+
+
+
+
+
+2-8
+import java.util.Scanner;
+public class SalesTax {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter purchase amount: ");
+		double purchaseAmount=input.nextDouble();
+		double tax=purchaseAmount*0.06;
+		System.out.println("Sales tax is $ "+(int)(tax*100)/100.0);
+				}
+}
+数值类型转换
+
+
+
+
+
+2-9
+import java.util.Scanner;
+public class ComputerLoan {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter annual interest rate, e.g., 7.25: ");
+		double annualInterestRate=input.nextDouble();
+		double monthlyInterestRate=annualInterestRate/1200;
+		System.out.print("Enter number of years asa an integer, e.g., 5: ");
+		int number0fYears=input.nextInt();
+		System.out.print("Enter loan amount, e.g., 120000.95: ");
+		double loanAmount=input.nextDouble();
+		double monthlyPayment=loanAmount*monthlyInterestRate/(1-1/Math.pow(1+monthlyInterestRate,number0fYears*12));
+		double totalPayment=monthlyPayment*number0fYears*12;
+		System.out.println("The montly payment is $"+(int)(monthlyPayment*100)/100.0);
+		System.out.println("The total payment is $"+(int)(totalPayment*100)/100.0);
+	}
+}
